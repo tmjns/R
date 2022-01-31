@@ -1,6 +1,6 @@
-# VISUALIZER
+# Items-Demo (vite.js app)
 
-Run ```npm i``` to install all dependencies. It's a vite.js app!
+Run ```npm i``` to install all dependencies.
 
 ## Run
 
