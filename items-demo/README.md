@@ -11,5 +11,5 @@ npm run dev
 ## Browse
 
 ```
-http://localhost:3000
+http://localhost:3000 (only Google Chrome)
 ```
