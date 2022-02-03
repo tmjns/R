@@ -4,6 +4,8 @@
 
 Before I dig deeper into project details, I want to give proper respect to https://buck.co/ for the main inspiration of this project.
 
+
+## Working process.
 <img src="https://user-images.githubusercontent.com/38649555/152338177-48a86292-88b4-4ac6-93d2-8b5b1473f438.jpg" width="1200"/>
 <p align = "center">Preparing of the lazy susan bearing.</p></br>
 
@@ -14,4 +16,4 @@ Before I dig deeper into project details, I want to give proper respect to https
 <p align = "center">First working prototype.</p></br>
 
 <img src="https://user-images.githubusercontent.com/38649555/152342064-ca25fa06-9abc-4a06-a59d-bc2aeee1c8fb.jpg" width="1200"/>
-<p align = "center">Installation of the aperture.</p></br>
+<p align = "center">Installation of the front panel.</p></br>
