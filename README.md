@@ -21,17 +21,14 @@ Simply open up the file in your chrome browser.
 async function start() {
   
   const port = await navigator.serial.requestPort();
-
   await port.open({ baudRate: 9600 });
-
   const textDecoder = new TextDecoderStream();
-  const readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
   const reader = textDecoder.readable.getReader();
 
   while (true) {
       const { value, done } = await reader.read();
+      
       if (done) {
-
           reader.releaseLock();
           break;
       }
@@ -39,6 +36,7 @@ async function start() {
       if(value.charAt(0) == "1"){
           rotation+= 0.02;
       }
+      
       if(value.charAt(0) == "0"){
           rotation-= 0.02;
       }
