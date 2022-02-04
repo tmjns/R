@@ -19,6 +19,7 @@ Choose your board and connect.
 Navigate to the ```items demo``` folder and run ``` npm install ```. Afterwards run ``` npm run dev ``` to start the app.
 
 ## Serial communication
+Since the controller only sends either zeros ```0``` or ``` 1 ``` ones, I am looking at all the values ​​that come in and adjust the rotation of the torus.
 
 ```js
 
@@ -38,11 +39,11 @@ async function start() {
       }
 
       if(value.charAt(0) == "1"){
-          rotation+= 0.02; // rotates torus to the right
+          rotation+= 0.02; // rotation to the right
       }
       
       if(value.charAt(0) == "0"){
-          rotation-= 0.02; // rotates torus to the left
+          rotation-= 0.02; // rotation to the left
       }
   }
   
