@@ -6,13 +6,16 @@ Before I dig deeper into project details, I want to give proper respect to https
 
 ## Setup
 
-### Items demo
-
-Run ``` npm install ``` and ``` npm run dev ``` to start the vite.js app
-
 ### Torus demo
 
 Simply open up the file in your chrome browser.
+
+### Connect
+<img src="https://user-images.githubusercontent.com/38649555/152540325-6ae7b94a-eb7c-4037-b4b1-35b4c8ecaee1.png" width="1200">
+
+### Items demo
+
+Run ``` npm install ``` and ``` npm run dev ``` to start the vite.js app
 
 ## Serial communication
 
@@ -45,7 +48,7 @@ async function start() {
 }
 
 ```
-<img width="1200" alt="chrome-serial-api" src="https://user-images.githubusercontent.com/38649555/152540325-6ae7b94a-eb7c-4037-b4b1-35b4c8ecaee1.png">
+
 
 ## Working process.
 <img src="https://user-images.githubusercontent.com/38649555/152338177-48a86292-88b4-4ac6-93d2-8b5b1473f438.jpg" width="1200"/>
