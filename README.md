@@ -45,7 +45,7 @@ async function start() {
 }
 
 ```
-
+<img width="1200" alt="chrome-serial-api" src="https://user-images.githubusercontent.com/38649555/152540325-6ae7b94a-eb7c-4037-b4b1-35b4c8ecaee1.png">
 
 ## Working process.
 <img src="https://user-images.githubusercontent.com/38649555/152338177-48a86292-88b4-4ac6-93d2-8b5b1473f438.jpg" width="1200"/>
