@@ -8,14 +8,15 @@ Before I dig deeper into project details, I want to give proper respect to https
 
 ### Torus demo
 
-Simply open up the file in your chrome browser.
+Simply open the ```index.html``` file in your Google Chrome browser and click the connect button.
 
 ### Connect
 <img src="https://user-images.githubusercontent.com/38649555/152540325-6ae7b94a-eb7c-4037-b4b1-35b4c8ecaee1.png" width="1200">
+Choose your board and connect.
 
 ### Items demo
 
-Run ``` npm install ``` and ``` npm run dev ``` to start the vite.js app
+Navigate to the ```items demo``` folder and run ``` npm install ```. Afterwards run ``` npm run dev ``` to start the app.
 
 ## Serial communication
 
