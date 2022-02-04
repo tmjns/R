@@ -5,6 +5,39 @@
 Before I dig deeper into project details, I want to give proper respect to https://buck.co/ for the main inspiration of this project.
 
 
+```js
+
+async function start() {
+  
+  const port = await navigator.serial.requestPort();
+
+  await port.open({ baudRate: 9600 });
+
+  const textDecoder = new TextDecoderStream();
+  const readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
+  const reader = textDecoder.readable.getReader();
+
+  while (true) {
+      const { value, done } = await reader.read();
+      if (done) {
+
+          reader.releaseLock();
+          break;
+      }
+
+      if(value.charAt(0) == "1"){
+          rotation+= 0.02;
+      }
+      if(value.charAt(0) == "0"){
+          rotation-= 0.02;
+      }
+  }
+  
+}
+
+```
+
+
 ## Working process.
 <img src="https://user-images.githubusercontent.com/38649555/152338177-48a86292-88b4-4ac6-93d2-8b5b1473f438.jpg" width="1200"/>
 <p align = "center">Preparing of the lazy susan bearing.</p></br>
