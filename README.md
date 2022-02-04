@@ -34,11 +34,11 @@ async function start() {
       }
 
       if(value.charAt(0) == "1"){
-          rotation+= 0.02;
+          rotation+= 0.02; // rotates torus to the right
       }
       
       if(value.charAt(0) == "0"){
-          rotation-= 0.02;
+          rotation-= 0.02; // rotates torus to the left
       }
   }
   
