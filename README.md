@@ -54,16 +54,16 @@ async function start() {
 
 ## Working process.
 <img src="https://user-images.githubusercontent.com/38649555/152338177-48a86292-88b4-4ac6-93d2-8b5b1473f438.jpg" width="1200"/>
-Preparing of the lazy susan bearing.
+Preparing of the lazy susan bearing.</br>
 
 <img src="https://user-images.githubusercontent.com/38649555/152339098-100a1516-5a22-4231-b455-4755374fc538.jpg" width="1200"/>
-Attachment to the monitor.
+Attachment to the monitor.</br>
 
 <img src="https://user-images.githubusercontent.com/38649555/152371391-843d6362-b555-44a5-9fee-5c4652dbb0fc.gif" width="1200"/>
-First working prototype.
+First working prototype.</br>
 
 <img src="https://user-images.githubusercontent.com/38649555/152342064-ca25fa06-9abc-4a06-a59d-bc2aeee1c8fb.jpg" width="1200"/>
-Installation of the front panel.
+Installation of the front panel.</br>
 
 ## What's next?
 I am looking forward to implement and test this setup with [Touchdesigner](https://derivative.ca)
