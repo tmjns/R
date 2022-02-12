@@ -28,6 +28,7 @@ async function start() {
   const port = await navigator.serial.requestPort();
   await port.open({ baudRate: 9600 });
   const textDecoder = new TextDecoderStream();
+  const readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
   const reader = textDecoder.readable.getReader();
 
   while (true) {
