@@ -23,40 +23,41 @@ Since the controller only sends either zeros ```0``` or ``` 1 ``` ones, I am loo
 
 ```js
 
-async function start() {
-  
-  const port = await navigator.serial.requestPort();
-  await port.open({ baudRate: 9600 });
-  const textDecoder = new TextDecoderStream();
-  const readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
-  const reader = textDecoder.readable.getReader();
-
-  while (true) {
-      const { value, done } = await reader.read();
+this.button.addEventListener('click', async () => {
+    
+    let rotation = 0;
       
-      if (done) {
-          reader.releaseLock();
-          break;
-      }
+    const port = await navigator.serial.requestPort();
+    await port.open({ baudRate: 9600 });
+    const textDecoder = new TextDecoderStream();
+    const readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
+    const reader = textDecoder.readable.getReader();
 
-      if(value.charAt(0) == "1"){
-          rotation+= 0.02; // rotation to the right
-      }
-      
-      if(value.charAt(0) == "0"){
-          rotation-= 0.02; // rotation to the left
-      }
-  }
-  
-}
+    while (true) {
+        const { value, done } = await reader.read();
+        if (done) {
+            reader.releaseLock();
+            break;
+        }
+
+        // value -> string.
+        if(value.charAt(0) == "1"){
+            rotation = 0.0045;
+            console.log(rotation)
+        }
+
+        if(value.charAt(0) == "0"){
+            rotation = -0.0045;
+            console.log(rotation)
+        }
+    }
+    
+});
 
 ```
 
 
 ## Working process.
-<img src="https://user-images.githubusercontent.com/38649555/152338177-48a86292-88b4-4ac6-93d2-8b5b1473f438.jpg" width="1200"/>
-Preparing of the lazy susan bearing.</br>
-
 <img src="https://user-images.githubusercontent.com/38649555/152339098-100a1516-5a22-4231-b455-4755374fc538.jpg" width="1200"/>
 Attachment to the monitor.</br>
 
@@ -68,4 +69,3 @@ Installation of the front panel.</br>
 
 ## What's next?
 I am looking forward to implement and test this setup with [Touchdesigner](https://derivative.ca)
-

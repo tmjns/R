@@ -95,13 +95,15 @@ class Sketch{
     window.addEventListener('keydown', this.keyboard);
 
     // Controlls -> Chrome Serial API
+    // TODO: 
+    // 1. Better adjustment of composition rotation 
+    // 2. Timing and orientation of physical device 
     this.button.addEventListener('click', async () => {
 
       let rotation = 0;
       
       const port = await navigator.serial.requestPort();
       await port.open({ baudRate: 9600 });
-
       const textDecoder = new TextDecoderStream();
       const readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
       const reader = textDecoder.readable.getReader();
@@ -113,7 +115,7 @@ class Sketch{
           break;
         }
 
-        // value is a string.
+        // value -> string.
         if(value.charAt(0) == "1"){
           rotation = 0.0045;
           console.log(rotation)
