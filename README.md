@@ -11,7 +11,7 @@ Before I dig deeper into project details, I want to give proper respect to https
 Simply open the ```index.html``` file in your Google Chrome browser and click the connect button.
 
 ### Connect
-<img src="https://user-images.githubusercontent.com/38649555/152540325-6ae7b94a-eb7c-4037-b4b1-35b4c8ecaee1.png" width="1200">
+<img src="https://user-images.githubusercontent.com/38649555/153859856-e1ced2d3-d626-421c-b252-b78832da169d.png" width="1200">
 Choose your board and connect.
 
 ### Items demo
