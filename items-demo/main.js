@@ -22,12 +22,13 @@ class Sketch{
 
     this.render = this.Render.create({
       element: document.body,
+      canvas: document.getElementById("c"),
       engine: this.engine,
       options: {
         width: this.w,
         height: this.h,
         showAngleIndicator: false,
-        wireframes: true,
+        wireframes: false,
         background: 'rgb(20,21,31)',
         showCollisions: false,
         showVelocity: false  
@@ -44,7 +45,6 @@ class Sketch{
         fillStyle: "rgb(20,21,31)" 
       }
     }
-
   }
 
 
@@ -65,6 +65,8 @@ class Sketch{
       this.Bodies.polygon(300, 100, 5, 80, { 
         chamfer: { radius: [10, 40, 20, 40, 10] }
       }),
+      this.Bodies.circle(300, 250, 40, this.body_options),
+      this.Bodies.circle(300, 250, 40, this.body_options),
       this.Bodies.circle(300, 250, 40, this.body_options)
     ]);
   }
@@ -89,13 +91,48 @@ class Sketch{
     let runner = this.Runner.create();
     this.Runner.run(runner, this.engine);
 
+    // Keyboard controlls
     window.addEventListener('keydown', this.keyboard);
-    // window.addEventListener('click', this.chromeSerial);
+
+    // Controlls -> Chrome Serial API
+    this.button.addEventListener('click', async () => {
+
+      let rotation = 0;
+      
+      const port = await navigator.serial.requestPort();
+      await port.open({ baudRate: 9600 });
+
+      const textDecoder = new TextDecoderStream();
+      const readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
+      const reader = textDecoder.readable.getReader();
+
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) {
+          reader.releaseLock();
+          break;
+        }
+
+        // value is a string.
+        if(value.charAt(0) == "1"){
+          rotation = 0.0045;
+          console.log(rotation)
+          Matter.Composite.rotate(this.engine.world, rotation, {x: this.w / 2, y: this.h / 2})
+        }
+
+        if(value.charAt(0) == "0"){
+          rotation = -0.0045;
+          console.log(rotation)
+          Matter.Composite.rotate(this.engine.world, rotation, {x: this.w / 2, y: this.h / 2})
+        }
+      }
+
+    });
   }
 
 
   // Controlls -> Keyboard
-  keyboard = () => {
+  keyboard = (event) => {
     let rotation = 0;
 
     if ( event.key == "ArrowRight" ) {
@@ -109,47 +146,12 @@ class Sketch{
       Matter.Composite.rotate(this.engine.world, rotation, {x: this.w / 2, y: this.h / 2})
     }
   }
-
-  // Controlls -> Chrome Serial API
-  chromeSerial = () => {
-    
-    let  rotation = 0;
-
-    async function start() {    
-    
-      const port = await navigator.serial.requestPort();
-      await port.open({ baudRate: 9600 });
-      const textDecoder = new TextDecoderStream();
-      // const readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
-      const reader = textDecoder.readable.getReader();
-      
-      while (true) {
-          const { value, done } = await reader.read();
-          if (done) {
-            reader.releaseLock();
-            break;
-          }
-          
-          if(value.charAt(0) == "1"){
-            rotation += 0.00005;
-            Matter.Composite.rotate(this.engine.world, rotation, {x: this.w / 2, y: this.h / 2})
-          }
-          if(value.charAt(0) == "0"){
-            rotation -= 0.00005;
-            Matter.Composite.rotate(this.engine.world, rotation, {x: this.w / 2, y: this.h / 2})
-        }
-      }
-    }
-
-    this.button.onclick = start;
-    
-  }
   
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-let s = new Sketch(4, {
+let s = new Sketch(3, {
   status : "Init new Sketch ...",
   button : document.getElementById("button")
 })

@@ -16,6 +16,12 @@
             left: 50%;
             transform: translate(-50%,-50%);
         }
+
+        #button{
+            padding: 2px 7px;
+            border-width: 2px;
+            border-style: inset;
+        }
     </style>
     <script>
 
@@ -35,7 +41,6 @@
         async function start() {
   
             const port = await navigator.serial.requestPort();
-
             await port.open({ baudRate: 9600 });
 
             const textDecoder = new TextDecoderStream();
@@ -62,6 +67,6 @@
     </script>
 </head>
 <body>
-    <button onclick="start()">connect</button>
+    <button id="button" onclick="start()">connect arduino</button>
 </body>
 </html>
