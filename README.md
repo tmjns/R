@@ -11,7 +11,7 @@ Before I dig deeper into project details, I want to give proper respect to https
 Simply open the ```index.html``` file in your Google Chrome browser and click the connect button.
 
 ### Connect
-<img src="https://user-images.githubusercontent.com/38649555/152540325-6ae7b94a-eb7c-4037-b4b1-35b4c8ecaee1.png" width="1200">
+<img src="https://user-images.githubusercontent.com/38649555/154024661-6856780a-4c90-4332-b142-5b2500c3c69e.png" width="1200">
 Choose your board and connect.
 
 ### Items demo
@@ -58,14 +58,15 @@ this.button.addEventListener('click', async () => {
 
 
 ## Working process.
+Attachment to the monitor.
 <img src="https://user-images.githubusercontent.com/38649555/152339098-100a1516-5a22-4231-b455-4755374fc538.jpg" width="1200"/>
-Attachment to the monitor.</br>
 
+First working prototype.
 <img src="https://user-images.githubusercontent.com/38649555/152371391-843d6362-b555-44a5-9fee-5c4652dbb0fc.gif" width="1200"/>
-First working prototype.</br>
 
+Installation of the front panel.
 <img src="https://user-images.githubusercontent.com/38649555/152342064-ca25fa06-9abc-4a06-a59d-bc2aeee1c8fb.jpg" width="1200"/>
-Installation of the front panel.</br>
+
 
 ## What's next?
 I am looking forward to implement and test this setup with [Touchdesigner](https://derivative.ca)
