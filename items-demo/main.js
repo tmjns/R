@@ -103,13 +103,13 @@ class Sketch{
       let rotation = 0;
       
       const port = await navigator.serial.requestPort();
-      await port.open({ baudRate: 9600 });
+      await port.open({baudRate: 9600});
       const textDecoder = new TextDecoderStream();
       const readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
       const reader = textDecoder.readable.getReader();
 
       while (true) {
-        const { value, done } = await reader.read();
+        const {value, done} = await reader.read();
         if (done) {
           reader.releaseLock();
           break;
@@ -137,12 +137,12 @@ class Sketch{
   keyboard = (event) => {
     let rotation = 0;
 
-    if ( event.key == "ArrowRight" ) {
+    if (event.key == "ArrowRight") {
       rotation = 0.09;
       console.log(rotation)
       Matter.Composite.rotate(this.engine.world, rotation, {x: this.w / 2, y: this.h / 2})
     }
-    if ( event.key == "ArrowLeft" ) {
+    if (event.key == "ArrowLeft") {
       rotation = -0.09;
       console.log(rotation)
       Matter.Composite.rotate(this.engine.world, rotation, {x: this.w / 2, y: this.h / 2})
