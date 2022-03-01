@@ -4,7 +4,7 @@
 
 Before I dig deeper into project details, I want to give proper respect to https://buck.co/ for the main inspiration of this project.
 
-## Demo
+## Demos
 
 ### Torus
 
