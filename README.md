@@ -57,7 +57,7 @@ this.button.addEventListener('click', async () => {
 ```
 
 
-## Working process.
+## Process
 Attachment to the monitor.
 <img src="https://user-images.githubusercontent.com/38649555/152339098-100a1516-5a22-4231-b455-4755374fc538.jpg" width="1200"/>
 
