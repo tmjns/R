@@ -4,22 +4,22 @@
 
 Before I dig deeper into project details, I want to give proper respect to https://buck.co/ for the main inspiration of this project.
 
-## Setup
+## Demo
 
-### Torus demo
+### Torus
 
-Simply open the ```index.html``` file in your Google Chrome browser and click the connect button.
+Simply open the ```index.html``` file in your Google Chrome browser, choose your board, and click connect.
 
 ### Connect
 <img src="https://user-images.githubusercontent.com/38649555/154024661-6856780a-4c90-4332-b142-5b2500c3c69e.png" width="1200">
-Choose your board and connect.
 
-### Items demo
+
+### Items
 
 Navigate to the ```items demo``` folder and run ``` npm install ```. Afterwards run ``` npm run dev ``` to start the app.
 
 ## Serial communication
-Since the controller only sends either zeros ```0``` or ``` 1 ``` ones, I am looking at all the values ​​that come in and adjust the rotation of the torus.
+Since the controller only sends either ```0``` or ``` 1 ```, I am looking at all these values and adjusting the rotation of the torus. The digits are standing for a left or a right turn.
 
 ```js
 
