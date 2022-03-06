@@ -9,6 +9,12 @@ Before I dig deeper into project details, I want to give proper respect to https
 
 ## Demos
 
+### Items
+
+Navigate to the ```items demo``` folder and run ``` npm install ```. Afterwards run ``` npm run dev ``` to start the app.
+
+<img src="https://user-images.githubusercontent.com/38649555/156919725-7dc400a3-4b08-49fe-aa45-c81587064289.jpg" width="1200">
+
 ### Torus
 
 Simply open the ```index.html``` file in your Google Chrome browser, choose your board, and click connect.
@@ -16,10 +22,6 @@ Simply open the ```index.html``` file in your Google Chrome browser, choose your
 ### Connect
 <img src="https://user-images.githubusercontent.com/38649555/154024661-6856780a-4c90-4332-b142-5b2500c3c69e.png" width="1200">
 
-
-### Items
-
-Navigate to the ```items demo``` folder and run ``` npm install ```. Afterwards run ``` npm run dev ``` to start the app.
 
 ## Serial communication
 Since the controller only sends either ```0``` or ``` 1 ```, I am looking at all incoming values and adjusting the rotation.
