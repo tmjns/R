@@ -21,7 +21,7 @@ Simply open the ```index.html``` file in your Google Chrome browser, choose your
 Navigate to the ```items demo``` folder and run ``` npm install ```. Afterwards run ``` npm run dev ``` to start the app.
 
 ## Serial communication
-Since the controller only sends either ```0``` or ``` 1 ```, I am looking at all these values and adjusting the rotation of the torus. The digits are standing for a left or a right turn.
+Since the controller only sends either ```0``` or ``` 1 ```, I am looking at all incoming values and adjusting the rotation.
 
 ```js
 
