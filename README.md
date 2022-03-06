@@ -1,25 +1,28 @@
 <img src="https://user-images.githubusercontent.com/38649555/152340113-8b79e7e8-01a6-4c93-a150-0f216dc9c0e2.gif" width="100"/>
 
 # R – a ring-based interface.
+[![made-with-js](https://badges.aleen42.com/src/javascript.svg)](https://badges.aleen42.com/src/javascript.svg)
 
 Before I dig deeper into project details, I want to give proper respect to https://buck.co/ for the main inspiration of this project.
 
-## Setup
+<img src="https://user-images.githubusercontent.com/38649555/156917519-841c7fd7-f43c-4e4c-b915-ae75a3443129.jpg" width="1200"/>
 
-### Torus demo
+## Demos
 
-Simply open the ```index.html``` file in your Google Chrome browser and click the connect button.
+### Torus
+
+Simply open the ```index.html``` file in your Google Chrome browser, choose your board, and click connect.
 
 ### Connect
 <img src="https://user-images.githubusercontent.com/38649555/154024661-6856780a-4c90-4332-b142-5b2500c3c69e.png" width="1200">
-Choose your board and connect.
 
-### Items demo
+
+### Items
 
 Navigate to the ```items demo``` folder and run ``` npm install ```. Afterwards run ``` npm run dev ``` to start the app.
 
 ## Serial communication
-Since the controller only sends either zeros ```0``` or ``` 1 ``` ones, I am looking at all the values ​​that come in and adjust the rotation of the torus.
+Since the controller only sends either ```0``` or ``` 1 ```, I am looking at all incoming values and adjusting the rotation.
 
 ```js
 
@@ -55,18 +58,5 @@ this.button.addEventListener('click', async () => {
 });
 
 ```
-
-
-## Working process.
-Attachment to the monitor.
-<img src="https://user-images.githubusercontent.com/38649555/152339098-100a1516-5a22-4231-b455-4755374fc538.jpg" width="1200"/>
-
-First working prototype.
-<img src="https://user-images.githubusercontent.com/38649555/152371391-843d6362-b555-44a5-9fee-5c4652dbb0fc.gif" width="1200"/>
-
-Installation of the front panel.
-<img src="https://user-images.githubusercontent.com/38649555/152342064-ca25fa06-9abc-4a06-a59d-bc2aeee1c8fb.jpg" width="1200"/>
-
-
 ## What's next?
 I am looking forward to implement and test this setup with [Touchdesigner](https://derivative.ca)
