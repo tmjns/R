@@ -65,6 +65,18 @@ class Sketch{
       this.Bodies.polygon(300, 100, 5, 80, { 
         chamfer: { radius: [10, 40, 20, 40, 10] }
       }),
+      this.Bodies.polygon(300, 100, 5, 80, { 
+        chamfer: { radius: [10, 40, 20, 40, 10] }
+      }),
+      this.Bodies.polygon(300, 100, 5, 80, { 
+        chamfer: { radius: [10, 40, 20, 40, 10] }
+      }),
+      this.Bodies.circle(300, 250, 40, this.body_options),
+      this.Bodies.circle(300, 250, 40, this.body_options),
+      this.Bodies.circle(300, 250, 40, this.body_options),
+      this.Bodies.circle(300, 250, 40, this.body_options),
+      this.Bodies.circle(300, 250, 40, this.body_options),
+      this.Bodies.circle(300, 250, 40, this.body_options),
       this.Bodies.circle(300, 250, 40, this.body_options),
       this.Bodies.circle(300, 250, 40, this.body_options),
       this.Bodies.circle(300, 250, 40, this.body_options)
@@ -117,13 +129,13 @@ class Sketch{
 
         // value -> string.
         if(value.charAt(0) == "1"){
-          rotation = 0.0045;
+          rotation = 0.0039;
           console.log(rotation)
           Matter.Composite.rotate(this.engine.world, rotation, {x: this.w / 2, y: this.h / 2})
         }
 
         if(value.charAt(0) == "0"){
-          rotation = -0.0045;
+          rotation = -0.0039;
           console.log(rotation)
           Matter.Composite.rotate(this.engine.world, rotation, {x: this.w / 2, y: this.h / 2})
         }
@@ -153,7 +165,7 @@ class Sketch{
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-let s = new Sketch(3, {
+let s = new Sketch(4, {
   status : "Init new Sketch ...",
   button : document.getElementById("button")
 })
