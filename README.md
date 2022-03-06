@@ -5,7 +5,7 @@
 
 Before I dig deeper into project details, I want to give proper respect to https://buck.co/ for the main inspiration of this project.
 
-<img src="https://user-images.githubusercontent.com/38649555/156917519-841c7fd7-f43c-4e4c-b915-ae75a3443129.jpg" width="1200"/>
+<img src="https://user-images.githubusercontent.com/38649555/156919184-785654e7-3801-4e18-b278-d3853b75c027.jpg" width="1200"/>
 
 ## Demos
 
