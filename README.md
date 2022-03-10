@@ -3,7 +3,7 @@
 # R – a ring-based interface.
 [![made-with-js](https://badges.aleen42.com/src/javascript.svg)](https://badges.aleen42.com/src/javascript.svg)
 
-Before I dig deeper into project details, I want to give proper respect to <a href="https://buck.co/">Buck</a> for the main inspiration. For this, I experimented with the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API">Google Chrome Web Serial API</a> and build my on ring-based interface. 
+Before I dig deeper into project details, I want to give proper respect to <a href="https://buck.co/">Buck</a> for the main inspiration. For this, I experimented with the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API">Google Chrome Web Serial API</a> and build my own ring-based interface. 
 
 <img src="https://user-images.githubusercontent.com/38649555/156919184-785654e7-3801-4e18-b278-d3853b75c027.jpg" width="1200"/>
 
