@@ -1,5 +1,5 @@
 #include "helpers/common.h"
-#include "../modules/RotaryEncoder/Rotary.h"
+#include "../modules/RotaryEncoder/rotary.h"
 
 class Controller{
     public:
@@ -11,6 +11,4 @@ class Controller{
     private:
         
         Rotary rotary;
-        Rotary rotary_pin_one;
-        Rotary rotary_pin_two;
 };

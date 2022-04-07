@@ -1,43 +1,30 @@
-#include "Rotary.h"
-
-volatile long x, counter = 0; 
+#include "rotary.h"
 
 Rotary::Rotary(){}
 
-
-void Rotary::init(int pin, String dir) {
+void Rotary::init() {
     Serial.println("Rotary INIT");
-    this->rotary_pin = pin;
-    this->rotary_dir = dir;
-    pinMode(this->rotary_pin,INPUT_PULLUP);
-    
-    attachInterrupt(0, dirUp, RISING); 
-    attachInterrupt(1, dirDown, RISING);
+    pinMode(2,INPUT_PULLUP);
+    pinMode(3,INPUT_PULLUP);
+    attachInterrupt(2, dirUp, RISING); 
+    attachInterrupt(3, dirDown, RISING);
 }
 
 
 void Rotary::update(){
-    if(counter != x){
-        x = counter;
-    }
+    // update
 }
 
 
 void Rotary::dirUp() {
   if(digitalRead(3)==LOW) {
-    counter++;
-    Serial.print("1");
-  }else{
-    counter--;
+    Serial.print("--> RIGHT");
   }
 }
    
 
 void Rotary::dirDown() {
   if(digitalRead(2)==LOW) {
-    counter--;
-    Serial.print("0");
-  }else{
-    counter++;
+    Serial.print("--> LEFT");
   }
 }
